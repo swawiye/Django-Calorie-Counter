@@ -4,7 +4,7 @@ from django.db import models
 class FoodItems(models.Model): # instance for a table
     name = models.CharField(max_length=255) 
     calories = models.PositiveIntegerField()
-    date_added = models.DateField()
+    date_added = models.DateField(auto_now_add=True)
     
     def __str__(self):
         return self.name
