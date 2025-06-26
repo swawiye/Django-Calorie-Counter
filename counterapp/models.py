@@ -2,9 +2,9 @@ from django.db import models
 
 # Create your models here.
 class FoodItems(models.Model): # instance for a table
-    name = models.CharField(max_length=255) 
+    food_item = models.CharField(max_length=255) 
     calories = models.PositiveIntegerField()
     date_added = models.DateField(auto_now_add=True)
     
     def __str__(self):
-        return self.name
+        return self.food_item
