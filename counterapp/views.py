@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404 # 'redirect' -sends the user to a diff url, 'get_object_or_404' -fetches an object from the db; if it doesn't exist, it automatically returns a 404 (Not Found) error.
 from .models import FoodItem
 from datetime import date
-from django.views.decorators.http import require_POST # for the form submission operations
+from django.views.decorators.http import require_POST # for the form submission operations; Used to restrict a view so that it only works when the HTTP method is POST. If someone tries to access the view with a GET (or PUT, DELETE request), 405 Method Not Allowed response will be returned if the operation isn't allowed.
 
 # Create your views here.
 def index(request):

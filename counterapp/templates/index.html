@@ -4,7 +4,7 @@
 {% block content%}
 <div class="min-h-screen flex items-center justify-center bg-gray-50 py-10">
   <form method="POST" class="w-full max-w-md bg-white p-8 rounded-xl shadow-xl space-y-6">
-    {% csrf_token %}
+    {% csrf_token %} {% comment %} for safety configuration {% endcomment %}
     <div>
       <label for="fooditem" class="block text-lg font-medium text-gray-700 mb-2 text-center">Food Item</label>
       <input 
